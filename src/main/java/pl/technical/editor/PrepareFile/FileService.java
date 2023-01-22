@@ -3,7 +3,6 @@ package pl.technical.editor.PrepareFile;
 import org.springframework.stereotype.Service;
 import pl.technical.editor.CreateFile.CreateFile;
 import pl.technical.editor.CustomComponents.CutLine;
-import pl.technical.editor.CustomComponents.CutLineService;
 import pl.technical.editor.MappingController.MappingAction;
 import pl.technical.editor.CustomComponents.MatchLine;
 import pl.technical.editor.FileStructure.FieldsDto;
@@ -31,7 +30,8 @@ public class FileService implements FileAction {
 
     @Override
     public String prepareFile(XmlDto xmlDto) {
-        if(xmlDto.getCutLineService().getCustomCutLine().length() == 0) {
+        if(xmlDto.getCutLineService().getCustomCutLine().length() == 0
+          ||  xmlDto.getMatchLineService().getCustomMatchLine().length() == 0) {
             return createFile.createStandardFile(xmlDto);
         }
         return createFile.createCustomFile(xmlDto);
