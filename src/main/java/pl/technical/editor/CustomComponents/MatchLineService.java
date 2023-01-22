@@ -21,10 +21,10 @@ public class MatchLineService implements MatchLine {
     }
 
     @Override
-    public String standerdMatchFields(MappingControllerImpl mappingController) {
-        switch (mappingController.getMapping()){
+    public String standerdMatchFields(String mapping) {
+        switch (mapping){
             case "rrs/channel/item" -> {
-                return standardMatchLine = "rrs";
+                return standardMatchLine = "rrs/channel/item";
             }
             case "product/products" -> {
                 return standardMatchLine = "product";

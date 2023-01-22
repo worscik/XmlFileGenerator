@@ -6,6 +6,6 @@ import pl.technical.editor.MappingController.MappingControllerImpl;
 public interface MatchLine {
     String customMatchFields();
 
-    String standerdMatchFields(MappingControllerImpl mappingController);
+    String standerdMatchFields(String mapping);
 
 }
