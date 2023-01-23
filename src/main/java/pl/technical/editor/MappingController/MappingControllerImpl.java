@@ -12,8 +12,13 @@ public class MappingControllerImpl implements MappingAction {
     }
 
     @Override
-    public String checkMapping() {
-        return mapping;
+    public boolean checkMapping(String mapping) {
+        switch (mapping.toLowerCase()){
+            case "rrs/channel/item","root/item","product/products" ->{
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

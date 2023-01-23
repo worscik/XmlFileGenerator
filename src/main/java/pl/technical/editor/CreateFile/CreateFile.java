@@ -6,6 +6,6 @@ public interface CreateFile {
 
     String createCustomFile(XmlDto xmlDto);
 
-    String createStandardFile(XmlDto xmlDto);
+    String createStandardFile(XmlDto xmlDto, boolean isMappingOk);
 
 }

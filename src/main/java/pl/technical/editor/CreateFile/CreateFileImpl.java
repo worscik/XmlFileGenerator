@@ -14,8 +14,11 @@ public class CreateFileImpl extends LineBuilder implements CreateFile {
     }
 
     @Override
-    public String createStandardFile(XmlDto xmlDto) {
-        return createStandard(xmlDto);
+    public String createStandardFile(XmlDto xmlDto, boolean isMappingOk) {
+      if(!isMappingOk){
+        return "Mapping is not correct";
+      }
+      return createStandard(xmlDto);
     }
 
     private String createStandard(XmlDto xmlDto) {
