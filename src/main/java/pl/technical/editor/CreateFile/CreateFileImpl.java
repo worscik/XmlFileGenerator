@@ -1,14 +1,18 @@
 package pl.technical.editor.CreateFile;
 
 import org.springframework.stereotype.Service;
-import pl.technical.editor.FileStructure.FieldsDto;
 import pl.technical.editor.FileStructure.XmlDto;
-import pl.technical.editor.MappingController.MappingControllerImpl;
 
 @Service("CreateFile")
 public class CreateFileImpl extends LineBuilder implements CreateFile {
 
-    @Override
+    private final HeadersAction headersAction;
+
+    public CreateFileImpl(HeadersAction headersAction) {
+                this.headersAction = headersAction;
+    }
+
+        @Override
     public String createCustomFile(XmlDto xmlDto) {
         return "CUSTOM";
     }
@@ -25,7 +29,9 @@ public class CreateFileImpl extends LineBuilder implements CreateFile {
             StringBuilder sb = new StringBuilder();
 
 
-            sb.append(HEADERS);
+            sb.append(headersAction.setHeaders(xmlDto.getMappingController().getMapping()));
+
+            sb.append(VARIABLE);
 
             sb.append(NEWLINE);
             sb.append(xmlDto.getCutLineService().standardCutFields(xmlDto.getMappingController().getMapping()) + NEWLINE); // WYCINANIE
