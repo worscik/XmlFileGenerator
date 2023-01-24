@@ -56,131 +56,132 @@ public class FieldsDto {
     }
 
     public String getNewProductValue() {
-        return newProductValue;
+        return checkIfEmpty(newProductValue);
     }
 
     public String getAvailableKey() {
-        return availableKey;
+        return checkIfEmpty(availableKey);
     }
 
     public String getAvailableValue() {
-        return availableValue;
+        return checkIfEmpty(availableValue);
     }
 
     public String getBestsellerKey() {
-        return bestsellerKey;
+        return checkIfEmpty(bestsellerKey);
     }
 
     public String getBestsellerValue() {
-        return bestsellerValue;
+        return checkIfEmpty(bestsellerValue);
     }
 
     public String getBrand() {
-        return brand;
+        return checkIfEmpty(brand);
     }
 
     public String getCategories() {
-        return categories;
+        return checkIfEmpty(categories);
     }
 
     public String getCategoryMain() {
-        return categoryMain;
+        return checkIfEmpty(categoryMain);
     }
 
     public String getDescription() {
-        return description;
+        return checkIfEmpty(description);
     }
 
     public String getDetail1() {
-        return detail1;
+        return checkIfEmpty(detail1);
     }
 
     public String getDetail2() {
-        return detail2;
+        return checkIfEmpty(detail2);
     }
 
     public String getDetail3() {
-        return detail3;
+        return checkIfEmpty(detail3);
     }
 
     public String getDetail4() {
-        return detail4;
+        return checkIfEmpty(detail4);
     }
 
     public String getDetail5() {
-        return detail5;
+        return checkIfEmpty(detail5);
     }
 
     public String getManufacturer() {
-        return manufacturer;
+        return checkIfEmpty(manufacturer);
     }
 
     public String getPrice() {
-        return price;
+        return checkIfEmpty(price);
     }
 
+    //TODO
     public String getCurrency() {
-        return currency;
+        return checkIfEmpty(currency);
     }
 
     public String getPricePromo() {
-        return pricePromo;
+        return checkIfEmpty(pricePromo);
     }
 
     public String getQuantity() {
-        return quantity;
+        return checkIfEmpty(quantity);
     }
 
     public String getUrlProduct() {
-        return urlProduct;
+        return checkIfEmpty(urlProduct);
     }
 
     public String getUrlImg() {
-        return urlImg;
+        return checkIfEmpty(urlImg);
     }
 
     public String getGenderKey() {
-        return genderKey;
+        return checkIfEmpty(genderKey);
     }
 
     public String getGenderValue() {
-        return genderValue;
+        return checkIfEmpty(genderValue);
     }
 
     public String getUrlCategory() {
-        return urlCategory;
+        return checkIfEmpty(urlCategory);
     }
 
     public String getUrlCategoryMark() {
-        return urlCategoryMark;
+        return checkIfEmpty(urlCategoryMark);
     }
 
     public String getPopularity() {
-        return popularity;
+        return checkIfEmpty(popularity);
     }
 
     public String getSeason() {
-        return season;
+        return checkIfEmpty(season);
     }
 
     public String getColor() {
-        return color;
+        return checkIfEmpty(color);
     }
 
     public String getAddidtionalImage() {
-        return addidtionalImage;
+        return checkIfEmpty(addidtionalImage);
     }
 
     public String getIntDetail1() {
-        return intDetail1;
+        return checkIfEmpty(intDetail1);
     }
 
     public String getIntDetail2() {
-        return intDetail2;
+        return checkIfEmpty(intDetail2);
     }
 
     public String getIntDetail3() {
-        return intDetail3;
+        return checkIfEmpty(intDetail3);
     }
 
     public String checkIfEmpty(String value){

@@ -1,6 +1,6 @@
-package pl.technical.editor.MappingController;
+package pl.technical.editor.PrepareFile;
 
-public enum MatchLineTypes {
+public enum CutLineTypes {
 
     //TODO DO ZROBIENIA WYCINANIE STANDARDOWYCH POL
     RRS_CHANNEL_ITEM_STANDARD_LINE("<xsl:template match=\"rss/channel/title | rss/channel/link | rss/channel/description\"/>"),
@@ -11,7 +11,7 @@ public enum MatchLineTypes {
 
     private String descMatchLineType;
 
-    MatchLineTypes(String descMatchLineType) {
+    CutLineTypes(String descMatchLineType) {
         this.descMatchLineType = descMatchLineType;
     }
 

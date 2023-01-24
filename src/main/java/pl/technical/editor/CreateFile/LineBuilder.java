@@ -25,6 +25,7 @@ public class LineBuilder {
             "<xsl:output method=\"text\"/>" + NEWLINE +
             "<xsl:strip-space elements=\"node\"/>" + NEWLINE +
             "<xsl:strip-space elements=\"*\" />" + NEWLINE +
+             NEWLINE +
             "<xsl:variable name=\"newline\"><xsl:text>&#x0a;</xsl:text></xsl:variable>" + NEWLINE +
             "<xsl:variable name=\"sep\"><xsl:text>&#x7f;</xsl:text></xsl:variable>" + NEWLINE;
 

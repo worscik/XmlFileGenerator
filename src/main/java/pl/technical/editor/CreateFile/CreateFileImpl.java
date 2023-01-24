@@ -28,8 +28,8 @@ public class CreateFileImpl extends LineBuilder implements CreateFile {
             sb.append(HEADERS);
 
             sb.append(NEWLINE);
-          sb.append(xmlDto.getCutLineService().standardCutFields(xmlDto.getMappingController().getMapping()) + NEWLINE); // WYCINANIE
-          sb.append(xmlDto.getMatchLineService().standerdMatchFields(xmlDto.getMappingController().getMapping()) + NEWLINE ); // MATCH
+            sb.append(xmlDto.getCutLineService().standardCutFields(xmlDto.getMappingController().getMapping()) + NEWLINE); // WYCINANIE
+            sb.append(xmlDto.getMatchLineService().standerdMatchFields(xmlDto.getMappingController().getMapping()) + NEWLINE ); // MATCH
 
             sb.append(NEWLINE);
 

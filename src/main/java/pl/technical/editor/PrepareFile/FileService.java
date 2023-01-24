@@ -30,6 +30,7 @@ public class FileService implements FileAction {
 
     @Override
     public String prepareFile(XmlDto xmlDto) {
+
         if(xmlDto.getCutLineService().getCustomCutLine().length() != 0 ||  xmlDto.getMatchLineService().getCustomMatchLine().length() != 0) {
             return createFile.createCustomFile(xmlDto);
         }
