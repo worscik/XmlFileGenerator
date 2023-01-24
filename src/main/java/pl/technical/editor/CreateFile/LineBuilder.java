@@ -19,10 +19,7 @@ public class LineBuilder {
             "</xsl:choose>\n" +
             "<xsl:value-of select=\"$sep\"/>";
 
-    public final static String HEADERS = "<?xml version=\"1.0\" encoding=\"utf-8\"?>" + NEWLINE +
-            "<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\"" + NEWLINE +
-            "xmlns:g=\"http://base.google.com/ns/1.0\">" + NEWLINE +
-            "<xsl:output method=\"text\"/>" + NEWLINE +
+    public final static String VARIABLE =  "<xsl:output method=\"text\"/>" + NEWLINE +
             "<xsl:strip-space elements=\"node\"/>" + NEWLINE +
             "<xsl:strip-space elements=\"*\" />" + NEWLINE +
             "<xsl:variable name=\"newline\"><xsl:text>&#x0a;</xsl:text></xsl:variable>" + NEWLINE +

@@ -30,10 +30,12 @@ public class FileService implements FileAction {
 
     @Override
     public String prepareFile(XmlDto xmlDto) {
-        if(xmlDto.getCutLineService().getCustomCutLine().length() == 0
-          ||  xmlDto.getMatchLineService().getCustomMatchLine().length() == 0) {
-            return createFile.createStandardFile(xmlDto);
+
+        if(xmlDto.getCutLineService().getCustomCutLine().length() != 0 ||  xmlDto.getMatchLineService().getCustomMatchLine().length() != 0) {
+            return createFile.createCustomFile(xmlDto);
         }
-        return createFile.createCustomFile(xmlDto);
+
+        boolean isMappingCorrect = mappingAction.checkMapping(xmlDto.getMappingController().getMapping());
+        return createFile.createStandardFile(xmlDto,isMappingCorrect);
     }
 }

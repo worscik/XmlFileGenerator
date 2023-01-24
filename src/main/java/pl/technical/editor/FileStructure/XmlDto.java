@@ -34,7 +34,6 @@ public class XmlDto {
         return matchLineService;
     }
 
-
     @Override
     public String toString() {
         return "XmlDto{" +
