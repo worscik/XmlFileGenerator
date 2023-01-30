@@ -9,7 +9,7 @@ public class AvailableMappingsService implements AvailableMapping {
     ArrayList<String> availableMappings = new ArrayList<>();
 
     private ArrayList<String> addMappings(){
-        availableMappings.add("rrs/channel/item");
+        availableMappings.add("rss/channel/item");
         availableMappings.add("root/item");
         availableMappings.add("products/product");
         return availableMappings;

@@ -20,8 +20,8 @@ public class CutLineService implements CutLine {
     @Override
     public String standardCutFields(String mapping) {
        switch (mapping){
-           case "rrs/channel/item" -> {
-               return CutLineTypes.RRS_CHANNEL_ITEM_STANDARD_LINE.getDescMatchLineType();
+           case "rss/channel/item" -> {
+               return CutLineTypes.RSS_CHANNEL_ITEM_STANDARD_LINE.getDescMatchLineType();
            } case "root/item" -> {
                return CutLineTypes.ROOT_ITEM_STANDARD_LINE.getDescMatchLineType();
            }  case "products/product" -> {

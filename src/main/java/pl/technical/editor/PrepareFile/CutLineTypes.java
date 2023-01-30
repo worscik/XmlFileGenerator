@@ -3,7 +3,7 @@ package pl.technical.editor.PrepareFile;
 public enum CutLineTypes {
 
     //TODO DO ZROBIENIA WYCINANIE STANDARDOWYCH POL
-    RRS_CHANNEL_ITEM_STANDARD_LINE("<xsl:template match=\"rss/channel/title | rss/channel/link | rss/channel/description\"/>"),
+    RSS_CHANNEL_ITEM_STANDARD_LINE("<xsl:template match=\"rss/channel/title | rss/channel/link | rss/channel/description\"/>"),
 
     ROOT_ITEM_STANDARD_LINE("root/item"),
 

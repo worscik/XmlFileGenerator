@@ -23,7 +23,7 @@ public class MatchLineService implements MatchLine {
     @Override
     public String standerdMatchFields(String mapping) {
         switch (mapping){
-            case "rrs/channel/item" -> {
+            case "rss/channel/item" -> {
                 return standardMatchLine = "<xsl:template match=\"rss/channel/item\">";
             }
             case "product/products" -> {
