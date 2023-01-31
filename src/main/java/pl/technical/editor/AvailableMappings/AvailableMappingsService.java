@@ -1,6 +1,8 @@
 package pl.technical.editor.AvailableMappings;
 
 import org.springframework.stereotype.Service;
+import pl.technical.editor.Repository.AvailableMapping;
+
 import java.util.ArrayList;
 
 @Service("AvailableMappings")

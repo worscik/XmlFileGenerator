@@ -2,6 +2,7 @@ package pl.technical.editor.AvailableMappings;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import pl.technical.editor.Repository.AvailableMapping;
 
 import java.util.ArrayList;
 

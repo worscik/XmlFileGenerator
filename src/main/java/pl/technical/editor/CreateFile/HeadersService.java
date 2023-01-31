@@ -1,10 +1,10 @@
 package pl.technical.editor.CreateFile;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import pl.technical.editor.Repository.HeadersAction;
 
 @Service("Headers")
-public class HeadersService implements HeadersAction{
+public class HeadersService implements HeadersAction {
 
     @Override
     public String setHeaders(String mapping) {

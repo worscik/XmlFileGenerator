@@ -1,4 +1,4 @@
-package pl.technical.editor.CreateFile;
+package pl.technical.editor.Repository;
 
 public interface HeadersAction {
 

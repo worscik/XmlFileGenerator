@@ -2,6 +2,8 @@ package pl.technical.editor.CreateFile;
 
 import org.springframework.stereotype.Service;
 import pl.technical.editor.FileStructure.XmlDto;
+import pl.technical.editor.Repository.CreateFile;
+import pl.technical.editor.Repository.HeadersAction;
 
 @Service("CreateFile")
 public class CreateFileImpl extends LineBuilder implements CreateFile {
@@ -18,10 +20,7 @@ public class CreateFileImpl extends LineBuilder implements CreateFile {
     }
 
     @Override
-    public String createStandardFile(XmlDto xmlDto, boolean isMappingOk) {
-      if(!isMappingOk){
-        return "Mapping is not correct";
-      }
+    public String createStandardFile(XmlDto xmlDto) {
       return createStandard(xmlDto);
     }
 
@@ -29,12 +28,17 @@ public class CreateFileImpl extends LineBuilder implements CreateFile {
             StringBuilder sb = new StringBuilder();
 
 
+            //TODO OPTYMALIZACJA RENDEROWANIA
             sb.append(headersAction.setHeaders(xmlDto.getMappingController().getMapping()));
 
             sb.append(VARIABLE);
 
             sb.append(NEWLINE);
+
+            //TODO PRZEROBIENIE METODY NA STANDARD  I CUSTOM
             sb.append(xmlDto.getCutLineService().standardCutFields(xmlDto.getMappingController().getMapping()) + NEWLINE); // WYCINANIE
+
+            //TODO PRZEROBIENIE METODY NA STANDARD  I CUSTOM
             sb.append(xmlDto.getMatchLineService().standerdMatchFields(xmlDto.getMappingController().getMapping()) + NEWLINE ); // MATCH
 
             sb.append(NEWLINE);

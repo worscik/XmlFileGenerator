@@ -1,4 +1,4 @@
-package pl.technical.editor.AvailableMappings;
+package pl.technical.editor.Repository;
 
 import java.util.ArrayList;
 
