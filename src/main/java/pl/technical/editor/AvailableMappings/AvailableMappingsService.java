@@ -1,6 +1,8 @@
 package pl.technical.editor.AvailableMappings;
 
 import org.springframework.stereotype.Service;
+import pl.technical.editor.Repository.AvailableMapping;
+
 import java.util.ArrayList;
 
 @Service("AvailableMappings")
@@ -9,7 +11,7 @@ public class AvailableMappingsService implements AvailableMapping {
     ArrayList<String> availableMappings = new ArrayList<>();
 
     private ArrayList<String> addMappings(){
-        availableMappings.add("rrs/channel/item");
+        availableMappings.add("rss/channel/item");
         availableMappings.add("root/item");
         availableMappings.add("products/product");
         return availableMappings;

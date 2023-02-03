@@ -1,8 +1,7 @@
 package pl.technical.editor.CustomComponents;
 
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-import pl.technical.editor.MappingController.MappingControllerImpl;
+import pl.technical.editor.Repository.MatchLine;
 
 @Component("MatchService")
 public class MatchLineService implements MatchLine {
@@ -22,11 +21,11 @@ public class MatchLineService implements MatchLine {
 
     @Override
     public String standerdMatchFields(String mapping) {
-        switch (mapping){
-            case "rrs/channel/item" -> {
+        switch (mapping.toLowerCase()){
+            case "rss/channel/item" -> {
                 return standardMatchLine = "<xsl:template match=\"rss/channel/item\">";
             }
-            case "product/products" -> {
+            case "products/product" -> {
                 return standardMatchLine = "<xsl:template match=\"product/products\">";
             }
             case "root/item" -> {

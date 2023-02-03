@@ -1,7 +1,7 @@
 package pl.technical.editor.CustomComponents;
 
 import org.springframework.stereotype.Service;
-import pl.technical.editor.PrepareFile.CutLineTypes;
+import pl.technical.editor.Repository.CutLine;
 
 @Service("CutService")
 public class CutLineService implements CutLine {
@@ -19,13 +19,13 @@ public class CutLineService implements CutLine {
 
     @Override
     public String standardCutFields(String mapping) {
-       switch (mapping){
-           case "rrs/channel/item" -> {
-               return CutLineTypes.RRS_CHANNEL_ITEM_STANDARD_LINE.getDescMatchLineType();
+       switch (mapping.toLowerCase()){
+           case "rss/channel/item" -> {
+               return CutLineTypes.RSS_CHANNEL_ITEM_STANDARD_LINE.getDescCutLineType();
            } case "root/item" -> {
-               return CutLineTypes.ROOT_ITEM_STANDARD_LINE.getDescMatchLineType();
+               return CutLineTypes.ROOT_ITEM_STANDARD_LINE.getDescCutLineType();
            }  case "products/product" -> {
-               return CutLineTypes.PRODUCTS_PRODUCTS_STANDARD_LINE.getDescMatchLineType();
+               return CutLineTypes.PRODUCTS_PRODUCTS_STANDARD_LINE.getDescCutLineType();
            }
        }
        return "Its problem with match fields. Try again";

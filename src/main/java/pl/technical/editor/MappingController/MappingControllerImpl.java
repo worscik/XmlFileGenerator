@@ -1,6 +1,7 @@
 package pl.technical.editor.MappingController;
 
 import org.springframework.stereotype.Service;
+import pl.technical.editor.Repository.MappingAction;
 
 @Service("Mapping")
 public class MappingControllerImpl implements MappingAction {
@@ -14,7 +15,7 @@ public class MappingControllerImpl implements MappingAction {
     @Override
     public boolean checkMapping(String mapping) {
         switch (mapping.toLowerCase()){
-            case "rrs/channel/item","root/item","product/products" ->{
+            case "rss/channel/item","root/item","products/product" ->{
                 return true;
             }
         }

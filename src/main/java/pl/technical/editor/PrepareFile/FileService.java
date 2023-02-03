@@ -1,12 +1,13 @@
 package pl.technical.editor.PrepareFile;
 
 import org.springframework.stereotype.Service;
-import pl.technical.editor.CreateFile.CreateFile;
-import pl.technical.editor.CustomComponents.CutLine;
-import pl.technical.editor.MappingController.MappingAction;
-import pl.technical.editor.CustomComponents.MatchLine;
+import pl.technical.editor.Repository.CreateFile;
+import pl.technical.editor.Repository.CutLine;
+import pl.technical.editor.Repository.MappingAction;
+import pl.technical.editor.Repository.MatchLine;
 import pl.technical.editor.FileStructure.FieldsDto;
 import pl.technical.editor.FileStructure.XmlDto;
+import pl.technical.editor.Repository.FileAction;
 
 @Service("PrepareFile")
 public class FileService implements FileAction {
@@ -36,6 +37,9 @@ public class FileService implements FileAction {
         }
 
         boolean isMappingCorrect = mappingAction.checkMapping(xmlDto.getMappingController().getMapping());
-        return createFile.createStandardFile(xmlDto,isMappingCorrect);
+        if(!isMappingCorrect){
+            return "Mapping is not correct";
+        }
+        return createFile.createStandardFile(xmlDto);
     }
 }

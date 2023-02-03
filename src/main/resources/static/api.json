@@ -37,13 +37,13 @@
         "intDetail3": ""
     },
     "Mapping": {
-        "mapping": "test"
+        "mapping": "rss/channel/item"
     },
     "CutFields": {
-        "customCutLine": "testCut"
+        "customCutLine": ""
     },
     "MatchFields": {
-        "customMatchLine": "testMatch"
+        "customMatchLine": ""
     }
 
 }
