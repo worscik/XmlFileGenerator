@@ -1,4 +1,4 @@
-docker build -t xml .
-docker stop xml || true
-docker rm xml || true
-docker run -d -p 8080:8080 --name xml xml
+docker build -t smxmlcreator .
+docker stop smxmlcreator || true
+docker rm smxmlcreator || true
+docker run -d -p 40006:8080 --name smxmlcreator smxmlcreator

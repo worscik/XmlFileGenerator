@@ -2,9 +2,9 @@ package pl.technical.editor.FileStructure;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Repository;
-import pl.technical.editor.CustomComponents.CutLineService;
-import pl.technical.editor.MappingController.MappingControllerImpl;
-import pl.technical.editor.CustomComponents.MatchLineService;
+import pl.technical.editor.Service.CustomComponents.CutLineService;
+import pl.technical.editor.Service.MappingController.MappingControllerImpl;
+import pl.technical.editor.Service.CustomComponents.MatchLineService;
 
 @Repository
 public class XmlDto {

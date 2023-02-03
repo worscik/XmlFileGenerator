@@ -1,0 +1,6 @@
+1. /getAvailableMappings
+    Returns the supported mapping types in the ArrayList.
+
+2. /createFile
+    Returns the generated transform.
+
