@@ -16,7 +16,7 @@ public class CreateFileImpl extends LineBuilder implements CreateFile {
 
         @Override
     public String createCustomFile(XmlDto xmlDto) {
-        return "CUSTOM";
+        return "Custom XML file is not ready yet";
     }
 
     @Override

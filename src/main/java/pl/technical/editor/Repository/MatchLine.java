@@ -8,4 +8,5 @@ public interface MatchLine {
 
     String standerdMatchFields(String mapping);
 
+    String customMatchField(String mapping,String customFields);
 }

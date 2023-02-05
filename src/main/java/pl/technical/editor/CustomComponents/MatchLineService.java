@@ -25,11 +25,21 @@ public class MatchLineService implements MatchLine {
             case "rss/channel/item" -> {
                 return standardMatchLine = "<xsl:template match=\"rss/channel/item\">";
             }
-            case "products/product" -> {
-                return standardMatchLine = "<xsl:template match=\"product/products\">";
+            case "products/product", "root/item" -> {
+                return standardMatchLine = "<xsl:template match=\""+ mapping + "\">";
             }
-            case "root/item" -> {
-                return standardMatchLine = "<xsl:template match=\"root/item\">";
+        }
+        return "Can't find selected line to match";
+    }
+
+    @Override
+    public String customMatchField(String mapping, String customFields) {
+        switch (mapping.toLowerCase()){
+            case "rss/channel/item" -> {
+                return standardMatchLine = "<xsl:template match=\"rss/channel/item\">";
+            }
+            case "products/product", "root/item" -> {
+                return standardMatchLine = "<xsl:template match=\""+ mapping + customFields + "\">";
             }
         }
         return "Can't find selected line to match";
