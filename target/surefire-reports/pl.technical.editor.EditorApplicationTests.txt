@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: pl.technical.editor.EditorApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.338 s - in pl.technical.editor.EditorApplicationTests

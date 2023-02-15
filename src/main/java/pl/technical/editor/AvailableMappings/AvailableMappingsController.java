@@ -1,5 +1,6 @@
 package pl.technical.editor.AvailableMappings;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.technical.editor.Repository.AvailableMapping;
@@ -7,6 +8,7 @@ import pl.technical.editor.Repository.AvailableMapping;
 import java.util.ArrayList;
 
 @RestController
+@CrossOrigin
 public class AvailableMappingsController {
 
     private final AvailableMapping availableMappings;
@@ -17,7 +19,8 @@ public class AvailableMappingsController {
 
     @GetMapping("/getAvailableMappings")
     public ArrayList<String> getAvailableMappings(){
-        return availableMappings.getAvailableMappings();
+        ArrayList<String> availableMappingsArray = new ArrayList<>();
+        return availableMappings.getAvailableMappings(availableMappingsArray);
     }
 
 }

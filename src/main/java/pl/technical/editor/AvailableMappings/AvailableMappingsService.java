@@ -8,17 +8,17 @@ import java.util.ArrayList;
 @Service("AvailableMappings")
 public class AvailableMappingsService implements AvailableMapping {
 
-    ArrayList<String> availableMappings = new ArrayList<>();
 
-    private ArrayList<String> addMappings(){
-        availableMappings.add("rss/channel/item");
-        availableMappings.add("root/item");
-        availableMappings.add("products/product");
-        return availableMappings;
+
+    private ArrayList<String> addMappings(ArrayList<String> availableMappingsArray){
+        availableMappingsArray.add("rss/channel/item");
+        availableMappingsArray.add("root/item");
+        availableMappingsArray.add("products/product");
+        return availableMappingsArray;
     }
 
     @Override
-    public ArrayList<String> getAvailableMappings() {
-        return addMappings();
+    public ArrayList<String> getAvailableMappings(ArrayList<String> availableMappingsArray) {
+        return addMappings(availableMappingsArray);
     }
 }
