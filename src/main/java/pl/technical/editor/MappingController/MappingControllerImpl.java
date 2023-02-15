@@ -9,7 +9,7 @@ public class MappingControllerImpl implements MappingAction {
     private String mapping;
 
     public String getMapping() {
-        return mapping;
+        return mapping.toLowerCase();
     }
 
     @Override

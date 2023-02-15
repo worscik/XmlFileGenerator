@@ -5,6 +5,7 @@ pl\technical\editor\EditorApplication.class
 pl\technical\editor\FileStructure\FieldsDto.class
 pl\technical\editor\MappingController\MappingControllerImpl.class
 pl\technical\editor\CreateFile\LineBuilder.class
+pl\technical\editor\Repository\CustomChecker.class
 pl\technical\editor\CustomComponents\MatchLineService.class
 pl\technical\editor\CreateFile\CreateFileImpl.class
 pl\technical\editor\PrepareFile\FileService.class
@@ -12,6 +13,7 @@ pl\technical\editor\CustomComponents\CutLineTypes.class
 pl\technical\editor\Repository\MappingAction.class
 pl\technical\editor\Repository\CutLine.class
 pl\technical\editor\CustomComponents\MatchLineTypes.class
+pl\technical\editor\CustomComponents\CustomCheckerImpl.class
 pl\technical\editor\CustomComponents\CutLineService.class
 pl\technical\editor\CreateFile\HeadersService.class
 pl\technical\editor\Repository\CreateFile.class

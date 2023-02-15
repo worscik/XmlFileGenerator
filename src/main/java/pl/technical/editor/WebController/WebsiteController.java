@@ -1,5 +1,6 @@
 package pl.technical.editor.WebController;
 
+import jdk.jfr.ContentType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
