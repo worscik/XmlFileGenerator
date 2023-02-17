@@ -9,7 +9,7 @@ import pl.technical.editor.FileStructure.XmlDto;
 import pl.technical.editor.Repository.FileAction;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class WebsiteController {
 
     public final static int EMPTYFIELD = 0;
@@ -25,7 +25,6 @@ public class WebsiteController {
         if(xmlDto.getFieldsDto().getId().length() == EMPTYFIELD) {
             return "ID can't be empty";
         }
-
         return fileAction.prepareFile(xmlDto);
     }
 

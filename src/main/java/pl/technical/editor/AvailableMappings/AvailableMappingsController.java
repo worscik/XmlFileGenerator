@@ -8,7 +8,7 @@ import pl.technical.editor.Repository.AvailableMapping;
 import java.util.ArrayList;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class AvailableMappingsController {
 
     private final AvailableMapping availableMappings;
